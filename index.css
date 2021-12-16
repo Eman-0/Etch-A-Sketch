@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.squares-container {
+    height: 960px;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+}
+.row {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: 100%;
+    border-style: solid;
+    border-color: black;
+}
+/* .draw:hover {
+    background-color: black;
+
+} */
