@@ -1,12 +1,20 @@
-const squareContainer = document.querySelector('.squares-container');
+import { drawEvent } from "./Events.js"
 
-for (let i = 0; i < 16; i++) {
-    const row = document.createElement('div');
-    row.classList.add('row', 'draw');
-    for (let j = 0; j < 16; j++){
-        const column = document.createElement('div');
-        column.classList.add('column', 'draw');
-        row.appendChild(column);
+function Sketch (sizeOfGrid) {
+    const squareContainer = document.querySelector('.squares-container');
+    console.log(sizeOfGrid);
+    for (let i = 0; i < sizeOfGrid; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row', 'draw');
+        for (let j = 0; j < sizeOfGrid; j++){
+            const column = document.createElement('div');
+            column.classList.add('column', 'draw');
+            row.appendChild(column);
+        }
+        squareContainer.appendChild(row);
     }
-    squareContainer.appendChild(row);
+    drawEvent();
 }
+
+Sketch(16);
+export { Sketch }
