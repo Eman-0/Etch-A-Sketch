@@ -16,6 +16,12 @@ clearButton.addEventListener('click', (e) => {
     location.reload();
 })
 
+function displayNumSquares(numSquares) {
+    const domDisplay = document.querySelector('.num-squares');
+
+    domDisplay.textContent = numSquares + ' X ' + numSquares;
+}
+
 const slider = document.querySelector('.slider')
 
 slider.oninput = () => {
@@ -23,6 +29,7 @@ slider.oninput = () => {
     while(squareContainer.firstChild){
         squareContainer.removeChild(squareContainer.firstChild);
     }
+    displayNumSquares(slider.value);
     Sketch(slider.value);
     drawEvent();
 }

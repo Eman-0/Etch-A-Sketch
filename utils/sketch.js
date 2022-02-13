@@ -2,7 +2,7 @@ import { drawEvent } from "./Events.js"
 
 function Sketch (sizeOfGrid) {
     const squareContainer = document.querySelector('.squares-container');
-    console.log(sizeOfGrid);
+   
     for (let i = 0; i < sizeOfGrid; i++) {
         const row = document.createElement('div');
         row.classList.add('row', 'draw');
@@ -17,4 +17,5 @@ function Sketch (sizeOfGrid) {
 }
 
 Sketch(16);
+
 export { Sketch }
